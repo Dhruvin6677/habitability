@@ -8,7 +8,7 @@ app = Flask(__name__)
 CORS(app)  # Allows frontend-backend communication
 
 # Load ranked dataset if it exists
-DATA_PATH = "data/habitability_ranked.csv"
+DATA_PATH = "habitability_ranked.csv"
 ranked_data = pd.read_csv(DATA_PATH) if os.path.exists(DATA_PATH) else None
 
 # Mock Model Class: Replaces the need for model.pkl
