@@ -1412,7 +1412,7 @@ async function runAnalysis(){
 
   let prediction=0,probability=0;
   try{
-    const res=await fetch('http://127.0.0.1:5000/predict',{
+    const res=await fetch('/predict',{
       method:'POST',headers:{'Content-Type':'application/json'},
       body:JSON.stringify({koi_period:period,koi_prad:radius,koi_teq:temp,koi_insol:flux,koi_smass:smass,koi_slum:slum,koi_steff:steff,koi_srad:srad})
     });
